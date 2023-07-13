@@ -521,8 +521,9 @@ GameObject:
   - component: {fileID: 940088511}
   - component: {fileID: 940088510}
   - component: {fileID: 940088509}
+  - component: {fileID: 940088513}
   m_Layer: 0
-  m_Name: CampGauche
+  m_Name: PlayerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,6 +608,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &940088513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940088508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7648ff70f7e047c4b95cc9dfe5a56f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendlyBaseLife: 500
 --- !u!1001 &951772086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,8 +774,9 @@ GameObject:
   - component: {fileID: 1167202087}
   - component: {fileID: 1167202086}
   - component: {fileID: 1167202085}
+  - component: {fileID: 1167202089}
   m_Layer: 0
-  m_Name: CampDroit
+  m_Name: EnemyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,6 +861,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167202089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167202084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab98830974a01bd4a91582f9321de801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBaseLife: 500
 --- !u!1001 &1268054228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1004,6 +1032,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78e36ff544542140bd64e1e8b0783ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerGold: 0
+  playerXP: 0
+  enemyBaseLife: 0
+  playerBaseLife: 0
+  friendlyBase: {fileID: 940088508}
+  enemyBase: {fileID: 1167202084}
+  classicSoldier: {fileID: 6439812742139573446, guid: 7cca11ec489d2714c98df34263609306, type: 3}
+  distanceSoldier: {fileID: 6439812742139573446, guid: d5115af958e8c064783ff4d475131287, type: 3}
+  heavySoldier: {fileID: 6439812742139573446, guid: 7602df4aa7acfe74690014e0bbb59dc6, type: 3}
 --- !u!1 &1423800625
 GameObject:
   m_ObjectHideFlags: 0
