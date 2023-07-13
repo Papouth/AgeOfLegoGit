@@ -15,7 +15,7 @@ public class BaseSoldat : MonoBehaviour
     [SerializeField] protected int life = 100;
 
     [Tooltip("Cout d'achat")]
-    [SerializeField] protected int buyCost = 10;
+    [SerializeField] public int buyCost = 10;
 
     [Tooltip("Cout de revente")]
     [SerializeField] protected int sellCost = 5;
