@@ -8,4 +8,15 @@ public class Distance : BaseSoldat
     {
         base.Start();
     }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
+
+    protected override void ChangeState(AIState state)
+    {
+        // LongFight
+        if (state == AIState.LongFight) Debug.Log("LongFight State");
+    }
 }

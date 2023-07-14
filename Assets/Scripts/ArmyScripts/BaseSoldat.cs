@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+public enum AIState
+{
+    Idle,
+    Walk,
+    Fight,
+    LongFight,
+    Die
+}
+
 public class BaseSoldat : MonoBehaviour
 {
     #region Variables
@@ -43,6 +52,8 @@ public class BaseSoldat : MonoBehaviour
 
     [Tooltip("Apparence selon l'epoque")]
     [SerializeField] protected GameObject[] skins = new GameObject[5];
+
+    protected AIState soldierState;
     #endregion
 
 
@@ -55,4 +66,33 @@ public class BaseSoldat : MonoBehaviour
         deafeatXp = Random.Range(10 * multEra, 50 * multEra);
     }
 
+    protected virtual void Update()
+    {
+        //ChangeState(soldierState);
+    }
+
+
+    /// <summary>
+    /// Changement d'etat du soldat
+    /// </summary>
+    /// <param name="state"></param>
+    protected virtual void ChangeState(AIState state)
+    {
+        // Idle
+        if (state == AIState.Idle) Debug.Log("Idle State");
+
+        // Walk
+        if (state == AIState.Walk) Debug.Log("Walk State");
+
+        // Fight
+        if (state == AIState.Fight) Debug.Log("Fight State");
+
+        // Die
+        if (state == AIState.Die) Debug.Log("Die State");
+    }
+
+    protected virtual void Movement()
+    {
+        
+    }
 }

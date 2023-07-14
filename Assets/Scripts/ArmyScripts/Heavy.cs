@@ -8,4 +8,9 @@ public class Heavy : BaseSoldat
     {
         base.Start();
     }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
 }
