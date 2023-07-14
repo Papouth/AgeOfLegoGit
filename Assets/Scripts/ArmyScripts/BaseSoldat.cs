@@ -29,13 +29,13 @@ public class BaseSoldat : MonoBehaviour
     [Tooltip("Cout de revente")]
     [SerializeField] protected int sellCost = 5;
 
-    [Tooltip("Cout quand on la tue")]
-    [SerializeField] protected int defeatCost = 15;
+    [Tooltip("Or reçu lorsqu'on le tue")]
+    [SerializeField] protected int goldOnDie = 15;
 
-    [Tooltip("XP quand on la tue")]
+    [Tooltip("XP quand on le tue")]
     [SerializeField] protected int deafeatXp = 10;
 
-    [Tooltip("L'epoque actuelle de la troupe")]
+    [Tooltip("L'epoque actuelle du soldat")]
     [SerializeField] protected int actualEra = 1;
 
     [Tooltip("Multiplicateur d'XP avec l'epoque")]
@@ -54,13 +54,23 @@ public class BaseSoldat : MonoBehaviour
     [SerializeField] protected GameObject[] skins = new GameObject[5];
 
     protected AIState soldierState;
+
+    private GameManager GM;
     #endregion
 
+    #region Built-in Methods
+    protected virtual void Awake()
+    {
+        GM = FindObjectOfType<GameManager>();
+    }
 
     protected virtual void Start()
     {
+        // On defenie l'epoque dans laquelle le soldat se trouve
+        multEra = GM.eraMult;
+
         // Calcul du cout de la troupe quand on la tue
-        defeatCost = buyCost + (buyCost / 2);
+        goldOnDie = buyCost + (buyCost / 2);
 
         // Calcul du gain d'Xp de la troupe quand on la tue
         deafeatXp = Random.Range(10 * multEra, 50 * multEra);
@@ -70,8 +80,10 @@ public class BaseSoldat : MonoBehaviour
     {
         //ChangeState(soldierState);
     }
+    #endregion
 
 
+    #region Customs Methods
     /// <summary>
     /// Changement d'etat du soldat
     /// </summary>
@@ -88,11 +100,32 @@ public class BaseSoldat : MonoBehaviour
         if (state == AIState.Fight) Debug.Log("Fight State");
 
         // Die
-        if (state == AIState.Die) Debug.Log("Die State");
+        if (state == AIState.Die) DeadSoldier();
     }
 
     protected virtual void Movement()
     {
         
     }
+
+    /// <summary>
+    /// Action lors de la mort du soldat
+    /// </summary>
+    protected virtual void DeadSoldier()
+    {
+        // On donne de l'XP au joueur
+        GM.playerXP += deafeatXp;
+
+        // On donne de l'or au joueur
+        GM.playerGold += goldOnDie;
+
+        // On detruit le soldat
+        Destroy(gameObject);
+    }
+
+    protected virtual void FightSoldier()
+    {
+
+    }
+    #endregion
 }

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public int playerXP;
     public int enemyBaseLife;
     public int playerBaseLife;
+    public int actualEra;
+    [HideInInspector] public int eraMult;
 
     [Header("Bases")]
     [SerializeField] private GameObject friendlyBase;
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         PlayerVictory();
 
         PlayerInput();
+        EraMultiplier();
     }
     #endregion
 
@@ -108,6 +111,17 @@ public class GameManager : MonoBehaviour
         #endregion
     }
 
+    /// <summary>
+    /// Sert a augmenter le drop d'or des troupes au fil des epoques
+    /// </summary>
+    private void EraMultiplier()
+    {
+        if (actualEra == 1) eraMult = 1;
+        else if (actualEra == 2) eraMult = 2;
+        else if (actualEra == 3) eraMult = 4;
+        else if (actualEra == 4) eraMult = 8;
+        else if (actualEra == 5) eraMult = 16;
+    }
 
     #region Conditions Victoire/Défaite
     private void PlayerDeFeat()
