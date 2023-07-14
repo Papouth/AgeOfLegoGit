@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 940088510}
   - component: {fileID: 940088509}
   - component: {fileID: 940088513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 1167202086}
   - component: {fileID: 1167202085}
   - component: {fileID: 1167202089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}

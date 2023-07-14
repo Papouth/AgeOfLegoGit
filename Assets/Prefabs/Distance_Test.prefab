@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4135248746688995128}
   - component: {fileID: 8806979610199894595}
   - component: {fileID: 7567406441285380375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4292224890656912200}
   - component: {fileID: 3155952248773403037}
   - component: {fileID: 6865579863535580049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 685008816417030765}
   - component: {fileID: 7566030735398736864}
   - component: {fileID: 5192347128763801801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 6018487910814316978}
   - component: {fileID: 4252158794010551100}
   - component: {fileID: 935792548645456372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 5824632911881496143}
   - component: {fileID: 4955571252276733330}
   - component: {fileID: 8767947198908084226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 2269310940678966095}
   - component: {fileID: 7427123817986162377}
   - component: {fileID: 5081857852025643691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 6061069928564299198}
   - component: {fileID: 4162102359972356877}
   - component: {fileID: 4106049483000451721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 6072835353541942418}
   - component: {fileID: 8778948124735523468}
   - component: {fileID: 2725330308947713062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 5914668033983590012}
   - component: {fileID: 5170534358009163092}
   - component: {fileID: 5138778686008921033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Distance_Test
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 5604894600326860796}
   - component: {fileID: 1954063040964204659}
   - component: {fileID: 8155242465582941206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 1608844729234494389}
   - component: {fileID: 7190131557915898651}
   - component: {fileID: 2135453534889400855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 2021679232960487528}
   - component: {fileID: 3603216847817668415}
   - component: {fileID: 8591879486745485357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 6921070378886971082}
   - component: {fileID: 7225654910004866354}
   - component: {fileID: 1039140895363574664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 4655874759833471554}
   - component: {fileID: 3600318300046447473}
   - component: {fileID: 8737324136843058558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

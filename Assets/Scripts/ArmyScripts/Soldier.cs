@@ -8,4 +8,10 @@ public class Soldier : BaseSoldat
     {
         base.Start();
     }
+
+
+    protected override void Update()
+    {
+        base.Update();
+    }
 }
