@@ -105,7 +105,7 @@ public class BaseSoldat : MonoBehaviour
 
     protected virtual void Movement()
     {
-        
+       // partie que Romain doit faire 
     }
 
     /// <summary>
