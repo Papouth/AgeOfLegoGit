@@ -59,17 +59,16 @@ public class GameManager : MonoBehaviour
         PlayerDeFeat();
         PlayerVictory();
 
-        PlayerInput();
         EraMultiplier();
     }
     #endregion
 
     #region Customs Methods
 
-    private void PlayerInput()
+    #region Spawn Soldats
+    public void BuyClassicSoldier()
     {
-        #region Spawn Soldats
-        if (Input.GetKeyDown(KeyCode.Alpha1) && playerGold >= soldierScript.buyCost)
+        if (playerGold >= soldierScript.buyCost)
         {
             // On retire l'or correspondant au recrutement de la troupe
             playerGold -= soldierScript.buyCost;
@@ -79,11 +78,12 @@ public class GameManager : MonoBehaviour
 
             Instantiate(classicSoldier, friendlyBase.transform.position, classicSoldier.transform.rotation);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) && playerGold < soldierScript.buyCost) Debug.Log("Pas assez d'or ! ");
+        else if (playerGold < soldierScript.buyCost) Debug.Log("Pas assez d'or ! ");
+    }
 
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && playerGold >= distanceScript.buyCost)
+    public void BuyDistanceSoldier()
+    {
+        if (playerGold >= distanceScript.buyCost)
         {
             // On retire l'or correspondant au recrutement de la troupe
             playerGold -= distanceScript.buyCost;
@@ -93,11 +93,12 @@ public class GameManager : MonoBehaviour
 
             Instantiate(distanceSoldier, friendlyBase.transform.position, distanceSoldier.transform.rotation);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && playerGold < distanceScript.buyCost) Debug.Log("Pas assez d'or ! ");
+        else if (playerGold < distanceScript.buyCost) Debug.Log("Pas assez d'or ! ");
+    }
 
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha3) && playerGold >= heavyScript.buyCost)
+    public void BuyHeavySoldier()
+    {
+        if (playerGold >= heavyScript.buyCost)
         {
             // On retire l'or correspondant au recrutement de la troupe
             playerGold -= heavyScript.buyCost;
@@ -107,9 +108,10 @@ public class GameManager : MonoBehaviour
 
             Instantiate(heavySoldier, friendlyBase.transform.position, heavySoldier.transform.rotation);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && playerGold < heavyScript.buyCost) Debug.Log("Pas assez d'or ! ");
-        #endregion
+        else if (playerGold < heavyScript.buyCost) Debug.Log("Pas assez d'or ! ");
     }
+    #endregion
+
 
     /// <summary>
     /// Sert a augmenter le drop d'or des troupes au fil des epoques
